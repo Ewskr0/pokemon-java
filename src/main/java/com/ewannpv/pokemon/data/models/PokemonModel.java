@@ -2,6 +2,7 @@ package com.ewannpv.pokemon.data.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.util.Objects;
 
@@ -13,6 +14,7 @@ public class PokemonModel {
     private String id;
     private String name;
     private String type;
+    @OneToOne
     private PokemonAttackModel attack;
 
     public PokemonModel() {

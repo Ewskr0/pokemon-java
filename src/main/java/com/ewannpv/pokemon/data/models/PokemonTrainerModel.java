@@ -2,6 +2,7 @@ package com.ewannpv.pokemon.data.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class PokemonTrainerModel {
     @Id
     private String id;
     private String name;
+    @OneToMany
     private List<PokemonModel> pokemons;
 
     public PokemonTrainerModel() {
